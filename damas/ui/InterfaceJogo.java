@@ -37,7 +37,7 @@ public class InterfaceJogo extends JFrame {
             for (int j = 0; j < 8; j++) {
                 JButton btn = new JButton();
                 btn.setPreferredSize(new Dimension(80, 80));
-                btn.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 24));
+                btn.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 24));
                 btn.setHorizontalAlignment(SwingConstants.CENTER);
                 
                 // Configuração CRUCIAL para o fundo visível
@@ -79,7 +79,6 @@ public class InterfaceJogo extends JFrame {
 
     private void atualizarInterface() {
         limparDestaques();
-
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 try {

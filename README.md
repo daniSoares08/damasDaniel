@@ -4,7 +4,7 @@ Um jogo de damas desenvolvido em Java com interface gráfica.
 
 Jogo de damas completo para 2 jogadores
 Interface gráfica com tabuleiro visual
-Peças representadas por emojis: 🔴 (brancas), ⚫ (pretas), 🫅 (dama branca), 👑 (dama preta)
+Peças representadas por emojis: ⚪ (brancas), ⚫ (pretas), ♔ (dama branca), ♚ (dama preta)
 Validação automática de movimentos
 Promoção de peças simples para damas
 Sistema de log que salva o histórico da partida

@@ -53,6 +53,10 @@ public class Tabuleiro implements Serializable {
             throw new MovimentoInvalidoException("Movimento inválido");
         }
 
+        if (getPeca(destino) != null) {
+            throw new MovimentoInvalidoException("Destino ocupado");
+        }
+
         // Trata captura (para damas)
         int diffLinha = Math.abs(destino.getLinha() - origem.getLinha());
         if (diffLinha >= 2) {

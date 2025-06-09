@@ -80,7 +80,7 @@ public class InterfaceJogo extends JFrame {
     private void atualizarInterface() {
         limparDestaques();
 
-        // Atualiza peças e habilita apenas as do jogador atual
+        // Atualiza peças
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 try {
@@ -90,17 +90,14 @@ public class InterfaceJogo extends JFrame {
 
                     if (peca != null) {
                         if (peca instanceof PecaDama) {
-                            btn.setText(peca.getCor() == CorPeca.BRANCA ? "🫅" : "👑");
+                            btn.setText(peca.getCor() == CorPeca.BRANCA ? "♔" : "♚");
                         } else {
-                            btn.setText(peca.getCor() == CorPeca.BRANCA ? "🔴" : "⚫");
+                            btn.setText(peca.getCor() == CorPeca.BRANCA ? "⚪" : "⚫");
                         }
-                        btn.setEnabled(peca.getCor() == jogo.getJogadorAtual().getCor());
-                    } else {
-                        btn.setEnabled(true);
                     }
+                    btn.setEnabled(true);
                 } catch (Exception e) {
                     botoes[i][j].setText("");
-                    botoes[i][j].setEnabled(true);
                 }
             }
         }
